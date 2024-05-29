@@ -25,3 +25,20 @@ export const addUser = (request, respose) => {
         return respose.status(200).json("Usuário criado com sucesso.");
     });
 };
+
+export const addUser = (req, res) => {
+    const query = "INSERT INTO usuarios(`nome`, `email`, `fone`, `data_nascimento`) VALUES(?)";
+
+    const values = [
+        req.body.nome,
+        req.body.email,
+        req.body.fone,
+        req.body.data_nascimento
+    ];
+
+    db.query(query, [values], (err) => {
+        if(err) return res.json(err);
+
+        return res.status(200).json("Usuário criado com sucesso.")
+    });
+} 
