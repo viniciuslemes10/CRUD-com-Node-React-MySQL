@@ -1,7 +1,17 @@
-# CRUD de Usuários
+# Projeto CRUD fullstack
 
-Este projeto é um CRUD de usuários, desenvolvido com **Node.js** para o backend, **React.js** para o frontend e **MySQL** como banco de dados.
+## Descrição do Projeto
 
+Este projeto consiste em um sistema de CRUD de usuários, onde é possível visualizar
+todos os usuários cadastrados na base de dados, editar suas informações conforme necessário,
+excluir usuários existentes e cadastrar novos usuários.
+
+
+## ℹ️ Observação Instruções de Instalação
+
+- Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo [Clique aqui](https://nodejs.org/).
+- Certifique-se de ter o MySQL instaldo em sua máquina. Você pode baixá-lo [Clique aqui](https://www.mysql.com/downloads/)
+- Clone este repositório para o seu ambiente local.
 ---
 
 ## 🚀 Como Executar o Projeto
@@ -48,22 +58,35 @@ Este projeto é um CRUD de usuários, desenvolvido com **Node.js** para o backen
 
 ---
 
-## 📚 Bibliotecas Utilizadas
 
-### Backend
-- **Express**: Framework web para Node.js.
-- **MySQL**: Cliente MySQL para Node.js.
-- **Nodemon**: Ferramenta para reiniciar automaticamente o servidor quando os arquivos são alterados.
-- **Cors**: Middleware para permitir solicitações de diferentes origens.
+## 📚 Dependências e Bibliotecas Utilizadas
 
-### Frontend
-- **React**: Biblioteca JavaScript para construir interfaces de usuário.
-- **React-DOM**: Pacote para interação com a DOM do navegador.
-- **Axios**: Cliente HTTP baseado em Promises para fazer requisições.
-- **React-Icons**: Biblioteca de ícones para React.
-- **React-Toastify**: Componente para exibir notificações toast.
-- **Styled-Components**: Biblioteca para estilização de componentes React.
-- **Web-Vitals**: Ferramenta para medir as métricas de desempenho do web.
+### API (Backend)
+
+- **express**: Framework Node.js para construção de aplicativos web.
+- **mysql**: Driver Node.js para MySQL, utilizado para comunicação com o banco de dados.
+- **cors**: Middleware express para habilitar o CORS (Cross-Origin Resource Sharing).
+- **nodemon**: Ferramenta para reiniciar automaticamente o servidor sempre que houver alterações no código.
+
+### Frontend (Cliente)
+
+- **react**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **react-dom**: Pacote de renderização DOM para React.
+- **react-icons**: Biblioteca de ícones para React.
+- **react-scripts**: Conjunto de scripts e configurações para projetos React.
+- **react-toastify**: Biblioteca para exibir notificações no estilo toast em aplicativos React.
+- **styled-components**: Biblioteca para estilização de componentes em React.
+- **axios**: Cliente HTTP baseado em Promise para o navegador e Node.js.
+
+
+## Rotas da API
+
+As rotas da API estão definidas no arquivo `api/routes/user.js`:
+
+- **GET (http://localhost:3000/)**: Retorna a lista de todos os usuários cadastrados.
+- **POST (http://localhost:3000/)**: Adiciona um novo usuário à base de dados.
+- **PUT (http://localhost:3000/:id)**: Atualiza as informações de um usuário específico.
+- **DELETE (http://localhost:3000/:id)**: Exclui um usuário específico da base de dados.
 
 ---
 
