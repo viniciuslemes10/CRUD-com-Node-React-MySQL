@@ -41,5 +41,5 @@ export const updateUser = (req, res) => {
         if(err) return res.json(err);
 
         return res.status(200).json("Usuário atualizado com sucesso!");
-    })
-}
+    });
+};
